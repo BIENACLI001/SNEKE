@@ -20,20 +20,6 @@ SNAKE_COLOR = 20
 # TODO: make a variable named head_x and assign half of the WINDOW_WIDTH to it.  use integer division //  (i.e. 11 / 2 is 5.5,  11//2 is 5)
 # TODO: make a variable named head_y and assign half of the WINDOW_HEIGHT + 100 to it.  use integer division //
 
-Snake_dx = 0
-Snake_dy = 0
-
-score = 0
-
-# Set colors
-GREEN = (0, 255, 0)  # (r, g, b)
-DARKGREEN =(10, 50, 10)
-# TODO: make a RED
-# TODO: make a DARKRED with rgb of (150, 0, 0)
-# TODO: make a WHITE
-
-# Set fonts
-
 # Set text
 
 # Set sounds and music

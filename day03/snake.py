@@ -17,7 +17,7 @@ clock = pygame.time.Clock()
 SNAKE_SIZE = 20
 
 head_x = WINDOW_WIDTH // 2
-head_y = WINDOW_HEIGHT // 2
+head_y = WINDOW_HEIGHT // 2 + 100
 
 snake_dx = 0
 snake_dy = 0
@@ -68,26 +68,12 @@ while running:
     # Check to see if the user wants to quit
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-Snake_dx = 0
-Snake_dy = 0
-
-score = 0
-
-# Set colors
-GREEN = (0, 255, 0)  # (r, g, b)
-DARKGREEN =(10, 50, 10)
-# TODO: make a RED
-# TODO: make a DARKRED with rgb of (150, 0, 0)
-# TODO: make a WHITE
-
-# Set fonts
-
             running = False
 
         # Move the snake
 
     # Add the head coordinate to the first index of the body coordinate list
-    # This will essentilalyl move all of the snakes body by one position in the list
+    # This will essentilaly move all of the snakes body by one position in the list
 
     # Update the x,y position of the snakes head and make a new coordinate
 
@@ -96,14 +82,26 @@ DARKGREEN =(10, 50, 10)
     # Check for collisions
 
     # Update HUD
+    score_text = font.render(f"Score: {score}", True, GREEN, DARKRED)
+
+
 
     # Fill the surface
+    display_surface.fill(WHITE)
 
     # Blit HUD
+    display_surface.blit(title_text, title_rect)
+    display_surface.blit(score_text, score_rect)
+
+
 
     # Blit assets
+    pygame.draw.rect(display_surface,GREEN, head_coord)
+    pygame.draw.rect(display_surface, RED, apple_coord)
 
     # Update display and tick clock
+    pygame.display.update()
+    clock.tick(FPS)
 
 # End the game
 pygame.quit()

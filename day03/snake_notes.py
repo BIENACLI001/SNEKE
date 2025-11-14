@@ -118,7 +118,7 @@ while running:
     The blit function for display_surface is for direct blitting.  
     2 ways to do similar things.  Update the display
     1. "Call pygame.draw.rect and passing in display_surface, GREEN, and head_coord for the head of the snake
-    2. "Call pygame.draw.rct again pass in display_surface, RED, and apple_coord for the apple.  
+    2. "Call pygame.draw.rect again pass in display_surface, RED, and apple_coord for the apple.  
     '''
 
     # Update display and tick clock
